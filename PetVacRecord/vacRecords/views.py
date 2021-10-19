@@ -3,7 +3,7 @@ from django.shortcuts import render,HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse("<h3>its working</h>")
+    return HttpResponse("index.html")
 
 def login():
     pass

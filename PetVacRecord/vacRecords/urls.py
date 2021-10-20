@@ -5,6 +5,7 @@ from vacRecords import views
 
 
 urlpatterns = [
-    path('', views.index,name="home"),
-    path('login', views.login,name="login"),
+    path('', views.login,name="login"),
+    path('index.html', views.index,name="home"),
+    
 ]

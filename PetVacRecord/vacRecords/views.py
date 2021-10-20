@@ -3,10 +3,14 @@ from django.shortcuts import render,HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse("index.html")
 
-def login():
-    pass
+    mydict={"hi":" from viwes.py"}
+    return render(request,"index.html",mydict)
+    
+    #return HttpResponse("index.html")
+
+def login(request):
+    return render(request,"login.html")
 
 def addVacRecord():
     pass

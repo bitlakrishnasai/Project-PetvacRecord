@@ -9,6 +9,36 @@ class User(models.Model):
     password=models.CharField(max_length=50)
     date=models.DateField()
     
-    
-    
+class Pet(models.Model):
 
+    name=models.CharField( max_length=50)
+    animal=models.CharField( max_length=50)
+    breed=models.CharField( max_length=50)
+    birth=models.DateField()
+    chipNumber=models.CharField( max_length=50)
+    
+    
+class Health(models.Model):
+    
+    date=models.DateField()
+    weight=models.SmallIntegerField("")
+    height=models.CharField(max_length=5)
+
+class Vaccine(models.Model):
+    date=models.DateField()
+    vaccine=models.CharField(max_length=50)
+    nextDueDate=models.DateField()
+
+class Medicines(models.Model):
+    startDate=models.DateField()
+    endDate=models.DateField()
+    medicine=models.CharField(max_length=50)
+
+class checkup(models.Model):
+    date=models.DateField()
+    date=models.DateField()
+    weight=models.SmallIntegerField("")
+    height=models.CharField(max_length=5)
+    nextCheckup=models.DateField()
+    
+    

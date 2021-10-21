@@ -34,11 +34,13 @@ class Medicines(models.Model):
     endDate=models.DateField()
     medicine=models.CharField(max_length=50)
 
-class checkup(models.Model):
+class Checkup(models.Model):
     date=models.DateField()
     date=models.DateField()
-    weight=models.SmallIntegerField("")
+    weight=models.CharField(max_length=5)
     height=models.CharField(max_length=5)
+    checkupnotes=models.TextField("",null=True)
+    prescription=models.CharField(max_length=50)
     nextCheckup=models.DateField()
     
     

@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class VacrecordsConfig(AppConfig):
+class VacRecordsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'vacRecords'

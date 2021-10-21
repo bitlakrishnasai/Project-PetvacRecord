@@ -11,20 +11,20 @@
 <body>
 
 <h2>HTML Forms</h2>
-
+{{message}}
 <form method="post" action = "/index.html">
 {% csrf_token %}
   <label for="fname">Id:</label><br>
   <input type="text" id="User_Name" name="user" placeholder ="User_Name" ><br>
   <label for="lname">Password:</label><br>
   <input type="password" id="Password" name="passw" placeholder="Password" ><br><br>
-  <input type="submit" value="Submit">
+  <input button class="open-button" type="submit" value="Login">
 </form> 
 
 
 
 
-<button>Signup</button>
+
 <style>.body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
@@ -36,9 +36,9 @@
   border: none;
   cursor: pointer;
   opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
+  
+  
+  
   width: 280px;
 }
 
@@ -46,8 +46,7 @@
 .form-popup {
   display: none;
   position: fixed;
-  bottom: 0;
-  right: 15px;
+  
   border: 3px solid #f1f1f1;
   z-index: 9;
 }
@@ -100,24 +99,24 @@
 
 
 
-<button class="open-button" onclick="openForm()">Open Form</button>
+<button class="open-button" onclick="openForm()"><h2>Sign up</h></button>
 
 <div class="form-popup" id="myForm">
-  <form method="post" action="/index.html" class="form-container" >
+  <form method="post" action="/login.html" class="form-container" >
   {% csrf_token %}
     <h1>Sign Up</h1>
 
     <label for="name"><b>Name</b></label>
     <input type="text" placeholder="Enter Name" name="name" required>
 
-    <label for="num"><b>Phone Number</b></label>
-    <input type="text" placeholder="Enter Phone Number" name="num" required>
+    <label for="phoneNumber"><b>Phone Number</b></label>
+    <input type="text" placeholder="Enter Phone Number" name="phoneNumber" required>
 
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
 
     <button type="submit" class="btn">Sign Up</button>
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>

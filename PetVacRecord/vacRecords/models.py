@@ -9,6 +9,10 @@ class User(models.Model):
     password=models.CharField(max_length=50)
     date=models.DateField()
     
+    def __str__(self):
+        return self.name
+    
+    
 class Pet(models.Model):
 
     name=models.CharField( max_length=50)

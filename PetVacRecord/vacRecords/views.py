@@ -5,7 +5,7 @@ from vacRecords.models import User
 # Create your views here.
 
 def index(request):
-
+    
      
     loggedin={"user":request.POST['user'],"csrf":request.POST['csrfmiddlewaretoken']}
     print(loggedin["csrf"])  
@@ -16,14 +16,16 @@ def index(request):
     #return HttpResponse("index.html")
 
 def login(request):
-
+    
+    
     return render(request,"login.html")
 
 
 
 def signUp(request):
-        print(request.POST)
-    
+        
+        if request.method=="POST":
+            print("hi")
         name=request.POST.get('name')
         email=request.POST.get('email')
         phoneNumber=str(request.POST.get('phnumber'))

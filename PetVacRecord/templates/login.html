@@ -1,140 +1,31 @@
 {% extends 'base.html' %}
-
+{% load static %} 
 
 {% block body %}
+<link rel="stylesheet" href="{% static '/css/home.css' %}">
+<title>PetVac Login</title>
 
-
-
-
- <!DOCTYPE html>
-<html>
 <body>
+<div class="flex-container">
+  <div class="left">
+    <img id="logo" src="{% static '/img/logo.jpg' %}"/ >
+  </div>
 
-<h2>HTML Forms</h2>
-{{message}}
-<form method="post" action = "/index.html">
+<div class="right">
+  {{message}}
+    <form method="post" action = "/index.html">
 {% csrf_token %}
-  <label for="fname">Id:</label><br>
-  <input type="text" id="User_Name" name="user" placeholder ="User_Name" ><br>
-  <label for="lname">Password:</label><br>
-  <input type="password" id="Password" name="passw" placeholder="Password" ><br><br>
-  <input button class="open-button" type="submit" value="Login">
-</form> 
+      <label for="fname">Id:</label><br>
+      <input type="text" id="User_Name" name="user" placeholder ="User_Name" ><br>
+      <label for="lname">Password:</label><br>
+      <input type="password" id="Password" name="passw" placeholder="Password" ><br><br>
+      <input button class="open-button" type="submit" value="Login">
+    </form> 
 
-
-
-
-
-<style>.body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
-
-/* Button used to open the contact form - fixed at the bottom of the page */
-.open-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  
-  
-  
-  width: 280px;
-}
-
-/* The popup form - hidden by default */
-.form-popup {
-  display: none;
-  position: fixed;
-  
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
-
-/* Add styles to the form container */
-.form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
-}
-
-/* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-}
-
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Set a style for the submit/login button */
-.form-container .btn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
-}
-
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
-}
-</style>
-
-
-
-
-<button class="open-button" onclick="openForm()"><h2>Sign up</h></button>
-
-<div class="form-popup" id="myForm">
-  <form method="post" action="/login.html" class="form-container" >
-  {% csrf_token %}
-    <h1>Sign Up</h1>
-
-    <label for="name"><b>Name</b></label>
-    <input type="text" placeholder="Enter Name" name="name" required>
-
-    <label for="phoneNumber"><b>Phone Number</b></label>
-    <input type="text" placeholder="Enter Phone Number" name="phoneNumber" required>
-
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
-
-    <button type="submit" class="btn">Sign Up</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
 </div>
 
-<script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-</script>
-
+</div>
 </body>
-</html>
 
                   
                 

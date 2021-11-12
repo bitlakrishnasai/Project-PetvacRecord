@@ -1,9 +1,14 @@
 .function-tiles{
     display: flex;
+    padding:20px;
+    padding-right: 20px;
 }
 .tile{
+    padding:20px;
+    height:100px;
+    width:60px;
     border-style: solid;
     border-radius: 3px;
-    border-width: 100px;
+    border-width: 1px;
 
 }

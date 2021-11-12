@@ -11,10 +11,11 @@
     <img id="logo" src="{% static '/img/logo.jpg' %}"/ >
   </div>
 
-<div class="right">
-  {{message}}
+  <div class="right">
+    {{message}}
+    <h1>Login</h>
     <form method="post" action = "/index.html">
-{% csrf_token %}
+      {% csrf_token %}
       <label for="fname">Id:</label><br>
       <input type="text" id="User_Name" name="user" placeholder ="User_Name" ><br>
       <label for="lname">Password:</label><br>
@@ -22,9 +23,10 @@
       <input button class="open-button" type="submit" value="Login">
     </form> 
 
-</div>
+  </div>
 
 </div>
+
 </body>
 
                   

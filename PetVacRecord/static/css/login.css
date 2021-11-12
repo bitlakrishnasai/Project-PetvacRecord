@@ -1,0 +1,40 @@
+@media only screen and (min-width: 992px) {
+    .flex-container{
+        width: 100%;
+        min-height: 100vh;
+        overflow: auto;
+        display: flex;       
+    }
+    .left{
+        min-width: fit-content;
+        min-height: fit-content;
+        max-width: 50%;    
+        flex: 1;
+        padding: 10%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        background-color: #404040;
+    }
+    .right{
+        flex:1;
+        padding: 10%;
+        min-width: fit-content;
+        min-height: fit-content;
+        background-color: rgb(222, 222, 224);
+        position:relative }
+    
+    .right form{
+        padding: 5%;
+        min-width: fit-content;
+        box-sizing: border-box;
+        border-style: solid;
+        border-radius: 10px;
+        border-color: rgb(78, 71, 71);
+        position: sticky;
+        float: none;
+    } 
+    .left img{
+        width: 100%;
+        padding-top: 15%;     
+    }
+  }

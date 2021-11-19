@@ -2,10 +2,50 @@
 {% load static %} 
 
 {% block body %}
-<link rel="stylesheet" href="{% static '/css/login.css' %}">
-<title>PetVac | Login</title>
 
+<title>PetVac | Login</title>
+<link rel="stylesheet" href="{% static '/css/style.css' %}">
+<link rel="stylesheet" href="{% static '/css/utility.css' %}">
+<header>
+    <div class="container">
+    <nav class="flex items-center justify-between">
+        <div class="left flex items-center">
+          
+            <div class="branding">
+                <img src="images/logo.svg" alt="">
+            </div>
+            <div>
+                
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Pages</a>
+                
+            </div>
+        </div>
+        <div class="right flex">
+           <button class="btn btn-primary">Login</button> 
+        </div>                            
+    </nav>
+    
+    <div class="dp flex justify-between">
+        <div class="left flex-1 flex justify-center">
+            
+            <img src="/images/PNG_3.png" alt="">
+        </div>
+        
+        <div class="right flex-1">
+            <h6>PetVac</h6>
+            <h1>Records for a <span>Healthy</span> Pet</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.    
+            </p>
+            <div>
+                <button class="btn btn-secondary">Sign Up</button>
+            </div>
+        </div>
+    </div>   
+</header>
 <body>
+  
 <div class="flex-container">
   <div class="left">
     <img id="logo" src="{% static '/img/logo.jpg' %}" >

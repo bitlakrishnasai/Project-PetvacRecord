@@ -2,35 +2,102 @@
 {% load static %} 
 
 {% block body %}
-<link rel="stylesheet" href="{% static '/css/index.css' %}">
-<div class="function-tiles">
-    <div class="tile">
-        Add Pet/Animal
-    </div>
+<link rel="stylesheet" href="{% static '/css/style.css' %}">
+<link rel="stylesheet" href="{% static '/css/utility.css' %}">
+<header>
+    <div class="container">
+    <nav class="flex items-center justify-between">
+        <div class="left flex items-center">
+            <div class="branding">
+                <img src="images/logo.svg" alt="">
+            </div>
+            <div>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Pages</a>
+                <a href="#">Github</a>
+            </div>
+        </div>
+        <div class="right flex">
+           <button class="btn btn-primary">Contact</button> 
+        </div>                            
+    </nav>
     
-    <div class="tile">
-        Add Vaccination Record
-    </div>
-    
-    <div class="tile">
-        Edit Records
-    </div>
-    
-    <div class="tile">
+    <div class="dp flex justify-between">
+        <div class="left flex-1 flex justify-center">
+            
+            <img src="/images/PNG_3.png" alt="">
+        </div>
         
-    </div>
-    
-    <div class="tile">
-       
+        <div class="right flex-1">
+            <h6>Krishna Sai Bitla</h6>
+            <h1>I'm a Software <span>Developer</span></h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.    
+            </p>
+            <div>
+                <button class="btn btn-secondary">Download CV</button>
+            </div>
+        </div>
     </div>   
-    
-    <div class="tile">
+</header>
+<section class="about">
+    <div class="container flex items-center">
+        <div class="flex-1">
+            <img class="about-me-image" src="./images/img2.jpg" alt="">
+        </div>
+        <div class="flex-1">
+            <h1>About <span>Me</span>!</h1>
+            <h3>Hello! I'm Krishna</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+            <div class="social">
+                <a href="#"><img class="icons" src="./images/facebook.png" alt=""></a>
+                <a href="#"><img class="icons" src="./images/github.png" alt=""></a>
+                <a href="#"><img class="icons" src="./images/linkedin.png" alt=""></a>
+                <a href="#"><img class="icons" src="./images/instagram.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="services">
+    <div class="container">
+        <h1 class="section-heading"><span>My </span>Services</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <div class="card-wrapper">
+            
+            <div class="card">
+                <img src="./images/card1.jpg" alt="">
+                <h2>Software Engineering</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
 
+            <div class="card">
+                <img src="./images/card2.jpg" alt="">
+                <h2>Web Development</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+
+            <div class="card">
+                <img src="./images/card3.jpg" alt="">
+                <h2>Project management</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+
+            <div class="card">
+                <img src="./images/card4.png" alt="">
+                <h2>App Development</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+
+
+
+
+        </div>
     </div>
 
 
+</section>
 
-</div>
 
 Welcome {{user}}
 
